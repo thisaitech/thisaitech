@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "9ZCi4qQpmnY3ZfyKy",
+  });
+})();
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="path"></div>
+            <div class="form" id="form">
+                <h1>Context Us</h1>
+<br><br>
+                <label>Full Name</label><br>
+                <input type="text" placeholder="full name" id="fullname" required><br><br>
+                <label>Email</label><br>
+                <input type="email" id="email_id" required><br><br>
+                <label>Message...</label><br>
+                <textarea name="" id="message" placeholder="Message" required></textarea>
+                <button id="button" onclick="sendMail()">Send</button>
+            </div>
+            <img src="hacker.png" id="man">
+            <img src="hacker (2).png" id="youtube">
+            <h2 id="head">Thisai &nbsp;Tech</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

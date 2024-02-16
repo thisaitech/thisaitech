@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "9ZCi4qQpmnY3ZfyKy",
+      });
+   })();
+</script>
+</head>
+<body>
+
+  <form action="">  
+    <h1>Contect us: </h1>
+    <br>
+    <br>
+    <input type="text" placeholder="full name" id="fullname" required>
+    <input type="email" placeholder="email id" id="email_id" required>
+    <br>
+    <br>
+    <br>
+    <textarea name=""   placeholder="message" id="message" required></textarea>
+    <button onclick="sendMail()">Send</button>
+  </form>
+   <script>
+    
+  function sendMail(){
+    var  templateParams ={
+               
+            
+
+       from_name : document.getElementById("fullname").value,
+       email_id : document.getElementById("email_id").value,
+       message : document.getElementById("message").value  
+        
+            }
+    
+
+    
+      emailjs.send('service_c62bo6j', 'template_h6okaws', templateParams).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert("Successfully Message Send...."+" "+ templateParams.from_name)
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+}
+   </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "9ZCi4qQpmnY3ZfyKy",
+  });
+})();
+</script>
+</head>
+</head>
+<body>
+
+  <form id="contactForm">  
+    <h1>Contact Us</h1>
+    <br>
+    <input type="text" placeholder="Full Name" id="fullname" required>
+    <input type="email" placeholder="Email Address" id="email_id" required>
+    <textarea placeholder="Message" id="message" required></textarea>
+    <button type="button" onclick="sendMail()">Send</button>
+  </form>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@2.6.3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("9ZCi4qQpmnY3ZfyKy"); // Replace 'yourUserID' with your actual EmailJS user ID -->
+    <script>
+    
+      function sendMail(){
+        var  templateParams ={
+                   
+                
+    
+           from_name : document.getElementById("fullname").value,
+           email_id : document.getElementById("email_id").value,
+           message : document.getElementById("message").value  
+            
+                }
+        
+    
+        
+          emailjs.send('service_c62bo6j', 'template_h6okaws', templateParams).then(
+            (response) => {
+              console.log('SUCCESS!', response.status, response.text);
+              alert("Successfully Message Send...."+" "+ templateParams.from_name)
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            },
+          );
+    }
+       </script>
+</body>
+</html>
